@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="primary">#1C2E46</color>
+    <color name="primary_dark">#142232</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black_shade_1">#292D36</color>
+    <color name="green">#348180</color>
+    <color name="actionBarColor">#29AB87</color>
+    <color name="golden">#FFD700</color>
+    <color name="green2">#8fbea9</color>
+    <color name="medium_green">#619F94</color>
+    <color name="light_green">#BDD7C3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="red">#c70000</color>
+    <color name="Charcoal">#36454F</color>
+    <color name="dark_white">#F2F1F1</color>
+    <color name="Platinum">#E5E4E2</color>
+    <color name="progressGreen">#4CAF50</color>
+    <color name="progressBackground">#E0E0E0</color>
+</resources>

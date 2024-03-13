@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15175960481",
+    "project_id": "crypto-lottery-system",
+    "storage_bucket": "crypto-lottery-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15175960481:android:756977b3a140fb89486de0",
+        "android_client_info": {
+          "package_name": "com.fyp.cls"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3PdFRsunucJasJvQyzEyFaNBLoSIzUQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>pkg1</key>
+        <value>Rs. 699</value>
+    </entry>
+    <entry>
+        <key>pkg2</key>
+        <value>Rs. 1299</value>
+    </entry>
+    <entry>
+        <key>pkg3</key>
+        <value>Rs. 1999</value>
+    </entry>
+    <entry>
+        <key>filer</key>
+        <value>Filer(15%)</value>
+    </entry>
+    <entry>
+        <key>nonfiler</key>
+        <value>Non-Filer(30%)</value>
+    </entry>
+
+    <entry>
+        <key>pkg1year</key>
+        <value>Vaild for 1 year</value>
+    </entry>
+
+    <entry>
+        <key>pkg2year</key>
+        <value>Vaild for 2 years</value>
+    </entry>
+
+    <entry>
+        <key>pkg3year</key>
+        <value>Vaild for 3 years</value>
+    </entry>
+
+
+</defaultsMap>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="document_created_successfully">Dcoument Created Successfully</string>
+    <string name="field_added_successfully">Field added Successfully</string>
+    <string name="confirm_exit_message">Are you sure you want to discard the changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>

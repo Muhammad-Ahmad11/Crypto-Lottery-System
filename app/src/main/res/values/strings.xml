@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Crypto Lottery System</string>
+    <string name="str_password">Password</string>
+    <string name="str_login">Login</string>
+    <string name="str_register">Register</string>
+    <string name="str_name">Full Name</string>
+    <string name="str_phone">Phone</string>
+    <string name="str_setPass">Set Password</string>
+    <string name="str_email">Email</string>
+    <string name="str_gender">Gender</string>
+    <string name="str_male">Male</string>
+    <string name="str_female">Female</string>
+    <string name="str_verify">Verify</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_to_continue">Login to Continue</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="add_image">Add Image</string>
+    <string name="str_confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="select_user">Select User</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="log_in">Log In</string>
+    <string name="or">or</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter">ENTER</string>
+    <string name="numbers">Numbers</string>
+    <string name="_1500">1500</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="image">Image</string>
+    <string name="detect_image">Detect Image</string>
+    <string name="scan_bonds">Scan Bonds</string>
+    <string name="scanner">Scanner</string>
+    <string name="swipe_again_to_delete">Swipe Again to delete</string>
+    <string name="tap_to_undo">Tap to Undo</string>
+    <string name="home">Home</string>
+    <string name="todo">TODO</string>
+    <string name="no_image_selected">No Image Selected\n</string>
+    <string name="document_created_successfully">Dcoument Created Successfully</string>
+    <string name="field_added_successfully">Field added Successfully</string>
+    <string name="confirm_exit">Confirm EXIT</string>
+    <string name="confirm_exit_message">Are you sure you want to discard the changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add_filter">Add Filter</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="john_doe">John Doe</string>
+    <string name="phone_1_123_456_7890">Phone: +1 123-456-7890</string>
+    <string name="total_space">Total Space</string>
+    <string name="_30">30%</string>
+    <string name="avaiability">Avaiability</string>
+    <string name="back_side">Back side</string>
+    <string name="save_bonds">Saved Bonds</string>
+    <string name="check_bonds">Check Bonds</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="location">Location</string>
+    <string name="city">City</string>
+    <string name="province">Province</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="profile">PROFILE</string>
+    <string name="update">Update</string>
+    <string name="category">Category:</string>
+    <string name="locations">Location:</string>
+    <string name="selling_price">Selling Price:</string>
+    <string name="type">Type:</string>
+    <string name="description">Description:</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="call">CALL</string>
+    <string name="whatsapp">WHATSAPP</string>
+    <string name="sms">sms</string>
+    <string name="add_prize">Add Prize</string>
+    <string name="enter_win_prize_bond_number">Enter Win Prize Bond Number</string>
+    <string name="_111111">111111</string>
+    <string name="edit_single">Edit Single</string>
+    <string name="please_enter_new_bond_number">Please enter new bond number</string>
+    <string name="_111111_222222_333333">111111 222222 333333..</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="singletext">singleText</string>
+    <string name="serialtext">serialText</string>
+    <string name="scantext">scanText</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="cliptext">clipText</string>
+
+    <string name="nav_header_title">Android Studio</string>
+
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="a_place_to_connect_share_and_learn">A place to connect, share, and learn.</string>
+
+    <string name="welcome_to_our_community">Welcome to Our Community!</string>
+
+    <string-array name="category_array">
+        <item>Category</item>
+        <item>100</item>
+        <item>200</item>
+        <item>750</item>
+        <item>1500</item>
+        <item>25000</item>
+        <item>40000</item>
+    </string-array>
+
+    <string-array name="bonds_array">
+        <item>100</item>
+        <item>200</item>
+        <item>750</item>
+        <item>1500</item>
+        <item>25000</item>
+        <item>40000</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background shape with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="50dp" /> <!-- Adjust the radius as needed -->
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/logo_small"/> <!-- Adjust the height as needed -->
+
+</layer-list>
