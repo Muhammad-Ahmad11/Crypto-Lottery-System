@@ -11,7 +11,7 @@ This repository contains the codebase for a Crypto Lottery System implemented on
 5. **User Interface**: User-friendly interface designed with XML layouts for smooth navigation and interaction.
 
 ## Technologies Used
-- **Android Studio**: Development environment for building the Android application.
+- **Android Studio**: Development  environment for building the Android application.
 - **Java**: Programming language used for backend logic and functionality.
 - **XML**: Markup language for designing user interface layouts.
 - **Ethereum Blockchain**: Utilized for managing lottery transactions and ensuring transparency.
