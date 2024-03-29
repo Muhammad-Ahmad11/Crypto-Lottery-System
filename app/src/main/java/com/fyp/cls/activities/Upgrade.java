@@ -1,9 +1,12 @@
 package com.fyp.cls.activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -13,7 +16,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -25,13 +31,17 @@ import com.fyp.cls.utilities.PreferenceManager;
 import java.util.Objects;
 
 public class Upgrade extends AppCompatActivity {
+    private PreferenceManager preferenceManager;
 
     String userAccount = "";
-
+    TextView pkg3Text;
+    TextView pkg2Text;
+    TextView pkg1Text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upgrade);
+        preferenceManager = new PreferenceManager(this);
 
         initialize_components();
         setRemoteConfig();
@@ -40,9 +50,9 @@ public class Upgrade extends AppCompatActivity {
 
     private void setRemoteConfig() {
 
-        TextView pkg1Text = findViewById(R.id.pkg1Value);
-        TextView pkg2Text = findViewById(R.id.pkg2Value);
-        TextView pkg3Text = findViewById(R.id.pkg3Value);
+         pkg1Text = findViewById(R.id.pkg1Value);
+         pkg2Text = findViewById(R.id.pkg2Value);
+         pkg3Text = findViewById(R.id.pkg3Value);
         TextView pkg1year = findViewById(R.id.pkg1year);
         TextView pkg2year = findViewById(R.id.pkg2year);
         TextView pkg3year = findViewById(R.id.pkg3year);
@@ -146,7 +156,7 @@ public class Upgrade extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PackageDetails.class);
                     startActivity(intent);
                 } else {
-
+                  subscribeData( pkg1Text.getText().toString().trim());
                 }
             }
         });
@@ -157,7 +167,7 @@ public class Upgrade extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PackageDetails.class);
                     startActivity(intent);
                 } else {
-
+                    subscribeData( pkg2Text.getText().toString().trim());
                 }
             }
         });
@@ -168,10 +178,30 @@ public class Upgrade extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PackageDetails.class);
                     startActivity(intent);
                 } else {
-
+                    subscribeData( pkg3Text.getText().toString().trim());
                 }
             }
         });
+    }
+
+    private void subscribeData(String price) {
+        long balance = Long.parseLong(preferenceManager.getString(Constants.KEY_ACC_BALANCE));
+        String amountString =price;
+        // Remove all non-digit characters from the string
+        amountString = amountString.replaceAll("[^\\d]", "");
+        // Parse the numeric string to a long
+        long amount = Long.parseLong(amountString);
+        if (balance<amount){
+            Toast.makeText(Upgrade.this, "Insufficient balance", Toast.LENGTH_SHORT).show();
+        }else {
+            long remaningBalance=balance-amount;
+            preferenceManager.putString(Constants.KEY_ACC_BALANCE, String.valueOf(remaningBalance));
+            FirebaseFirestore.getInstance().collection(Constants.KEY_COLLECTION_USERS)
+                    .document(preferenceManager.getString(Constants.KEY_USERID))
+                    .update(Constants.KEY_ACC_BALANCE, String.valueOf(remaningBalance));
+            displayAlert("Subscription Subscribed", "Congratulations, your subscription has been completed for amount " + amount + " and amount deduct from your balance");
+
+        }
     }
 
     @Override
@@ -189,7 +219,17 @@ public class Upgrade extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    private void displayAlert(@NonNull String title, @Nullable String message) {
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("Ok", (DialogInterface dialog, int which) ->{
+                    dialog.dismiss();
+                    finish();
+                })
+                .show();
+    }
     @Override
     public void onBackPressed() {
         // Perform the same behavior as the hardware back button
